@@ -2,41 +2,32 @@ var alt = false, currentbg = 0, altPressed = false, effects = false, loop = true
 var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor), isFirefox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1; isSafari = navigator.vendor.indexOf("Apple")==0 && /\sSafari\//.test(navigator.userAgent), isAndroid = navigator.userAgent.toLowerCase().indexOf("android") > -1;
 
 var bgmusic = [
-	{file: "loop1"},
-	{file: "loop2"},
-	{file: "loop3"},
-	{file: "arabic"},
-	{file: "roberto"},
-	{file: "affitta"},
-	{file: "aria"},
-	{file: "dasola"},
-	{file: "favola"},
-	{file: "patetico"},
-	{file: "verouomo "}
+	{file: "39-Hold_People-consolidated"},
+	{file: "33-Applause-consolidated"}
 ];
 
 var combos = [
-	{key: 32, file: "unwomo", desc: "Un womo"}, //spacebar
-	{key: 81, file: "diciamo", desc: "Diciamo..", alt_file: "andato", alt_desc: "Come sono andato?"}, //Q
-	{key: 87, file: "stravolgi", desc: "Tu mi stravolgi..", alt_file: "animaleschi", alt_desc: "istinti animaleschi"}, //W
-	{key: 69, file: "aaaaaaa", desc: "Aaaahh", alt_file: "becco", alt_desc: "Ti becco io.."}, //E
-	{key: 82, file: "elevata", desc: "Elevata!"}, //R
-	{key: 88, file: "chi", desc: "Chi?"}, //X
-	{key: 65, file: "amarone1", desc: "amarone", alt_file: "grattacielo"}, //A
-	{key: 83, file: "agguantarla", desc: "Vorrei agguantarla!", alt_file: "coniglietta"}, //S
-	{key: 68, file: "womoperlei", desc: "C'è un womo per lei"}, //D
-	{key: 79, file:"womini", desc: "Womini!"}, //O
-	{key: 90, file: "tesoro", desc: "Tesoro!", alt_file: "fuoco"}, //Z
-	{key: 67, file: "candy", desc: "Sei un candy di cioccolato"}, //C
-	{key: 85, file: "cosciotta", desc: "Cosciotta mia.."}, //U
-	{key: 73, file: "eccita", desc: "Mi eccita!"}, //I
-	{key: 66, file: "sichang3", desc: "Sì signora.."}, //B
-	{key: 76, file: "ah", desc: "Ah..."}, //L
-	{key: 74, file: "devo", desc: "Devo metterti in riiiga!!"}, //J
-	{key: 75, file: "pero", desc: "Però!"}, //K
-	{key: 80, file: "pause", desc: "Che bello fare le pause!"}, //P
-	{key: 77, file: "ragazzi", desc:"Sono arrivati i ragassi!"}, //M
-	{key: 78, file: "tentazione", desc:"Tentazione estrema spericulata!"}, //N
+	{key: 32, file: "32-That's_That-consolidated", desc: "And That's That!"}, //spacebar
+	{key: 81, file: "16-Quit_All_This_Nonsense-consolidated", desc: "Quit all this nonsense!", alt_file: "31-Language-consolidated", alt_desc: "Language that I detest!"}, //Q
+	{key: 87, file: "34-Hello-consolidated", desc: "Hello", alt_file: "32-That's_That-consolidated", alt_desc: "That's that!"}, //W
+	{key: 69, file: "14-Let's_Assume-consolidated", desc: "Let's Assume...", alt_file: "28-Made_Up_Pronouns-consolidated", alt_desc: "Made-up Pronouns"}, //E
+	{key: 82, file: "18-Mean_Mad_White_Man-consolidated", desc: "Mean Mad White Man!"}, //R
+	{key: 88, file: "35-Fuck_PC-consolidated", desc: "Fuck Political Correctness!"}, //X
+	{key: 65, file: "21-Be_A_Better_Person-consolidated", desc: "Be a better person", alt_file: "22-It's_A_Miracle-consolidated", alt_desc: "It's a Miracle!"}, //A
+	{key: 83, file: "25-Mother_Grizzly-consolidated", desc: "Mother Grizzly Bears...", alt_file: "23-College_Students-consolidated", alt_desc: "College students..."}, //S
+	{key: 68, file: "24-UFF-consolidated", desc: "UFF"}, //D
+	{key: 79, file:"19-MMMMM-consolidated", desc: "MMMMMMM"}, //O
+	{key: 90, file: "31-Language-consolidated", desc: "Language that I detest!", alt_file: "30-I_Know_The_Literature-consolidated", alt_desc: "I know the literature..."}, //Z
+	{key: 67, file: "37-Well_Google_It-consolidated", desc: "Well, Google it!"}, //C
+	{key: 85, file: "15-You_Would_Say-consolidated", desc: "You would say that."}, //U
+	{key: 73, file: "17-Why_The_Rage-consolidated", desc: "Why the rage, BRAH!"}, //I
+	{key: 66, file: "40-Please_Google_It-consolidated", desc: "Please Google it!"}, //B
+	{key: 76, file: "29-Radical_PC-consolidated", desc: "Radical"}, //L
+	{key: 74, file: "26-And_It's_Wrong-consolidated", desc: "And it's wrong!"}, //J
+	{key: 75, file: "27-Back_To_Equity-consolidated", desc: "Back to equity..."}, //K
+	{key: 80, file: "20-Get_Yourself_Together-consolidated", desc: "Get Yourself Together!"}, //P
+	{key: 77, file: "19-MMMMM-consolidated", desc:"MMMMMMM"}, //M
+	{key: 78, file: "24-UFF-consolidated", desc:"UFF"}, //N
 	{key: 86, file: "figa", desc:"Sei una figa stratosferica.."},
 	{key: 71, file: bgmusic[currentbg].file, desc:String.fromCharCode(9835)}
 ];
@@ -48,28 +39,28 @@ $(document).ready(function(){
 	for(i=0;i<combos.length-1;i++){
 		var audio = document.createElement("audio");
 		audio.setAttribute('id', combos[i].file);
-		audio.setAttribute('src', "audio/"+combos[i].file+".mp3");
+		audio.setAttribute('src', "audio/"+combos[i].file+".ogg");
 		document.body.appendChild(audio);
 	}
 	for(i=0;i<combos.length-1;i++){
 		if(combos[i].alt_file!=undefined){
 			var audio = document.createElement("audio");
 			audio.setAttribute('id', combos[i].alt_file);
-			audio.setAttribute('src', "audio/"+combos[i].alt_file+".mp3");
+			audio.setAttribute('src', "audio/"+combos[i].alt_file+".ogg");
 			document.body.appendChild(audio);
 		}
 	}
 	for(i=0;i<bgmusic.length;i++){
 		var audio = document.createElement("audio");
 		audio.setAttribute('id', bgmusic[i].file);
-		audio.setAttribute('src', "audio/"+bgmusic[i].file+".mp3");
+		audio.setAttribute('src', "audio/"+bgmusic[i].file+".ogg");
 		document.body.appendChild(audio);
 	}
 	if(isChrome) process(71);
 	if(!isChrome && !isSafari){
 		$(".letter").css({
 			'font-family': 'Verdana'
-		})		
+		})
 	}
 });
 
@@ -84,7 +75,7 @@ $(document).keydown(function(e){
 });
 
 $(document).keyup(function(e){
-	
+
 	if(e.which==18 && alt && altPressed){
 		e.preventDefault();
 		altKeys();
@@ -131,7 +122,7 @@ function altKeys(){
 		$("#effects").removeClass("option").addClass("out");
 
 		$("#prev").html("F").removeClass("special").removeClass("red");
-		
+
 		$("#playbutt").html("G").removeClass("special").removeClass("red").parent().removeClass("special_toggle");
 
 		$("#next").html("H").removeClass("special").removeClass("red");
@@ -236,7 +227,7 @@ function process(key){
 					setTimeout(function(){
 						key.removeClass("special_toggle");
 					}, 100);
-			
+
 				break;
 
 			case 8680:
@@ -254,7 +245,7 @@ function process(key){
 				setTimeout(function(){
 					key.removeClass("special_toggle");
 				}, 100);
-				
+
 				break;
 
 			case 9654: //play
@@ -354,9 +345,9 @@ function scritte(desc){
 	        });
 
 	    	$(".scritta"+numero).fadeIn(Math.floor(Math.random()*1000)).delay(2000).fadeOut(500, function(){
-				
+
 				$(this).remove()
-					
+
 			});
 		}
 	}
