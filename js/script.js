@@ -7,13 +7,13 @@ var bgmusic = [
 ];
 
 var combos = [
-	{key: 32, file: "32-That's_That-consolidated", desc: "And That's That!"}, //spacebar
+	{key: 32, file: "32-Thats_That-consolidated", desc: "And That's That!"}, //spacebar
 	{key: 81, file: "16-Quit_All_This_Nonsense-consolidated", desc: "Quit all this nonsense!", alt_file: "31-Language-consolidated", alt_desc: "Language that I detest!"}, //Q
-	{key: 87, file: "34-Hello-consolidated", desc: "Hello", alt_file: "32-That's_That-consolidated", alt_desc: "That's that!"}, //W
-	{key: 69, file: "14-Let's_Assume-consolidated", desc: "Let's Assume...", alt_file: "28-Made_Up_Pronouns-consolidated", alt_desc: "Made-up Pronouns"}, //E
+	{key: 87, file: "34-Hello-consolidated", desc: "Hello", alt_file: "32-Thats_That-consolidated", alt_desc: "That's that!"}, //W
+	{key: 69, file: "14-Lets_Assume-consolidated", desc: "Let's Assume...", alt_file: "28-Made_Up_Pronouns-consolidated", alt_desc: "Made-up Pronouns"}, //E
 	{key: 82, file: "18-Mean_Mad_White_Man-consolidated", desc: "Mean Mad White Man!"}, //R
 	{key: 88, file: "35-Fuck_PC-consolidated", desc: "Fuck Political Correctness!"}, //X
-	{key: 65, file: "21-Be_A_Better_Person-consolidated", desc: "Be a better person", alt_file: "22-It's_A_Miracle-consolidated", alt_desc: "It's a Miracle!"}, //A
+	{key: 65, file: "21-Be_A_Better_Person-consolidated", desc: "Be a better person", alt_file: "22-Its_A_Miracle-consolidated", alt_desc: "It's a Miracle!"}, //A
 	{key: 83, file: "25-Mother_Grizzly-consolidated", desc: "Mother Grizzly Bears...", alt_file: "23-College_Students-consolidated", alt_desc: "College students..."}, //S
 	{key: 68, file: "24-UFF-consolidated", desc: "UFF"}, //D
 	{key: 79, file:"19-MMMMM-consolidated", desc: "MMMMMMM"}, //O
@@ -23,12 +23,12 @@ var combos = [
 	{key: 73, file: "17-Why_The_Rage-consolidated", desc: "Why the rage, BRAH!"}, //I
 	{key: 66, file: "40-Please_Google_It-consolidated", desc: "Please Google it!"}, //B
 	{key: 76, file: "29-Radical_PC-consolidated", desc: "Radical"}, //L
-	{key: 74, file: "26-And_It's_Wrong-consolidated", desc: "And it's wrong!"}, //J
+	{key: 74, file: "26-And_Its_Wrong-consolidated", desc: "And it's wrong!"}, //J
 	{key: 75, file: "27-Back_To_Equity-consolidated", desc: "Back to equity..."}, //K
 	{key: 80, file: "20-Get_Yourself_Together-consolidated", desc: "Get Yourself Together!"}, //P
 	{key: 77, file: "19-MMMMM-consolidated", desc:"MMMMMMM"}, //M
 	{key: 78, file: "24-UFF-consolidated", desc:"UFF"}, //N
-	{key: 86, file: "figa", desc:"Sei una figa stratosferica.."},
+	{key: 86, file: "38-Passion_and_Wit-consolidated", desc:"Passion and Wit..."}, //V
 	{key: 71, file: bgmusic[currentbg].file, desc:String.fromCharCode(9835)}
 ];
 
