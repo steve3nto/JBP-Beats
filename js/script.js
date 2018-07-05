@@ -11,7 +11,7 @@ var bgmusic = [
 ];
 
 var currentbg = 0;
-//Math.floor(Math.random()*bgmusic.length);
+//var currentbg = Math.floor(Math.random() * bgmusic.length);
 
 var combos = [
 	{key: 32, file: "32-Thats_That-consolidated", desc: "And That's That!"}, //spacebar
