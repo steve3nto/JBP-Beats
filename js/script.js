@@ -10,7 +10,8 @@ var bgmusic = [
 	{file: "59-SYNTH2-consolidated"}
 ];
 
-var currentbg = Math.floor((Math.random() * bgmusic.length)+0.05);
+var currentbg = 0;
+//Math.floor(Math.random()*bgmusic.length);
 
 var combos = [
 	{key: 32, file: "32-Thats_That-consolidated", desc: "And That's That!"}, //spacebar
@@ -59,7 +60,7 @@ $(document).ready(function(){
 	for(i=0;i<bgmusic.length;i++){
 		var audio = document.createElement("audio");
 		audio.setAttribute('id', bgmusic[i].file);
-		audio.setAttribute('src', "audio/"+bgmusic[i].file+".ogg");
+		audio.setAttribute('src', "audio/Background/"+bgmusic[i].file+".ogg");
 		document.body.appendChild(audio);
 	}
 	if(isChrome) process(71);
